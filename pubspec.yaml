@@ -1,0 +1,853 @@
+name: biggest
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.3 <3.0.0"
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  carousel_slider: ^4.1.1
+  percent_indicator: ^4.2.2
+  intro_views_flutter: ^3.2.0
+  charts_flutter: ^0.12.0
+  flutter_slidable: ^1.3.0
+  flutter_rating_bar: ^4.0.1
+  flutter_credit_card: ^3.0.1
+  flutter_screenutil: ^5.5.3+2
+  font_awesome_flutter: ^10.1.0
+  google_maps_flutter: ^2.1.8
+  another_flushbar: ^1.10.29
+  credit_card: ^0.1.8
+  shimmer: ^2.0.0
+  flutter_svg: ^1.1.0
+  url_launcher: ^6.1.3
+  eva_icons_flutter: ^3.1.0
+  provider: ^6.0.3
+  lottie: ^1.3.0
+  pin_code_text_field: ^1.8.0
+  i18n: ^3.4.1
+  flutter_rounded_date_picker: ^3.0.1
+  shared_preferences: ^2.0.15
+  date_format: ^2.0.6
+  date_time_picker: ^2.1.0
+  status_alert: ^1.0.0
+  flutter_webview_plugin: ^0.4.0
+  curved_navigation_bar: ^1.0.3
+  animated_bottom_navigation_bar: ^1.0.0
+  animate_do: ^2.1.0
+  animated_size_and_fade: ^3.0.0
+  syncfusion_flutter_datepicker: ^20.1.60
+  supercharged: ^2.1.1
+  gradient_widgets: ^0.6.0
+  velocity_x: ^3.5.1
+  google_sign_in: ^5.3.3
+  liquid_swipe: ^2.1.1
+  connectivity: ^3.0.6
+  local_auth: ^2.1.0
+  signature: ^5.0.1
+  permission_handler: ^10.0.0
+  image_gallery_saver: ^1.7.1
+  flutter_pdfview: ^1.2.2
+  file_picker: ^3.0.4
+  path: ^1.8.1
+  path_provider: ^2.0.11
+  geolocator: ^8.2.1
+  barcode_widget: ^2.0.2
+  firebase_auth: ^3.3.20
+  firebase_storage: ^10.2.18
+  firebase_database: ^9.0.16
+  firebase_core: ^1.18.0
+  cloud_firestore: ^3.1.18
+  plugin_platform_interface: ^2.1.2
+  dialog_flowtter: ^0.3.3
+  quiver: ^3.1.0
+  easy_localization: ^3.0.1
+  flutter_facebook_auth: ^4.3.4+2
+  page_transition: ^2.0.7
+  simple_animations: ^4.1.0
+  bottom_navy_bar: ^6.0.0
+  expandable_bottom_bar: ^2.0.2
+  flutter_speed_dial: ^6.0.0
+  http: ^0.13.4
+  filter_list: ^1.0.1
+  ndialog: ^4.1.1+1
+  flutter_syntax_view: ^4.0.0
+  cool_alert: ^1.1.0
+  showcaseview: ^1.1.5
+  flutter_staggered_grid_view: ^0.6.1
+  im_stepper: ^1.0.1+1
+  intl: ^0.17.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: tab1
+      fonts:
+        - asset: assets/icon/ic_tab1.ttf
+    - family: tab2
+      fonts:
+        - asset: assets/icon/ic_tab2.ttf
+    - family: tab3
+      fonts:
+        - asset: assets/icon/ic_tab3.ttf
+    - family: tab4
+      fonts:
+        - asset: assets/icon/ic_tab4.ttf
+    - family: tab5
+      fonts:
+        - asset: assets/icon/ic_tab5.ttf
+    - family: Popins
+      fonts:
+        - asset: assets/font/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/font/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/font/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/font/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/font/Poppins-Bold.ttf
+          weight: 700
+    - family: Amira
+      fonts:
+        - asset: assets/font/Amira.otf
+    - family: Gotik
+      fonts:
+        - asset: assets/font/GOTHIC.TTF
+          weight: 400
+        - asset: assets/font/GOTHICB.TTF
+          weight: 600
+    - family: Sofia
+      fonts:
+        - asset: assets/font/Sofia/SofiaProBold.otf
+          weight: 900
+        - asset: assets/font/Sofia/SofiaProSemiBold.otf
+          weight: 800
+        - asset: assets/font/Sofia/SofiaProMedium.otf
+          weight: 700
+        - asset: assets/font/Sofia/SofiaProRegular.otf
+          weight: 600
+        - asset: assets/font/Sofia/SofiaProLight.otf
+          weight: 500
+        - asset: assets/font/Sofia/SofiaProExtraLight.otf
+          weight: 400
+        - asset: assets/font/Sofia/SofiaProUltraLight.otf
+          weight: 300
+    - family: home
+      fonts:
+        - asset: lib/Screen/FullApps/SunriseMart/Assets/custom_icon/ic_home.ttf
+    - family: hearth
+      fonts:
+        - asset: lib/Screen/FullApps/SunriseMart/Assets/custom_icon/ic_hearth.ttf
+    - family: service
+      fonts:
+        - asset: lib/Screen/FullApps/SunriseMart/Assets/custom_icon/ic_service.ttf
+    - family: myorder
+      fonts:
+        - asset: lib/Screen/FullApps/SunriseMart/Assets/custom_icon/ic_myorder.ttf
+    - family: profile
+      fonts:
+        - asset: lib/Screen/FullApps/SunriseMart/Assets/custom_icon/ic_profile.ttf
+    - family: location
+      fonts:
+        - asset: lib/Screen/FullApps/SunriseMart/Assets/custom_icon/ic_location.ttf
+    - family: gainers
+      fonts:
+        - asset: lib/Screen/FullApps/AlliedWallet/Assets/ic_gainers.ttf
+    - family: message
+      fonts:
+        - asset: lib/Screen/FullApps/AlliedWallet/Assets/ic_message.ttf
+    - family: tab
+      fonts:
+        - asset: lib/Screen/FullApps/AlliedWallet/Assets/ic_tab.ttf
+    - family: wallet
+      fonts:
+        - asset: lib/Screen/FullApps/AlliedWallet/Assets/ic_wallet.ttf
+    - family: tab1
+      fonts:
+        - asset: lib/Screen/FullApps/AlliedWallet/Assets/ic_tab1.ttf
+    - family: tab2
+      fonts:
+        - asset: lib/Screen/FullApps/AlliedWallet/Assets/ic_tab2.ttf
+    - family: tab3
+      fonts:
+        - asset: lib/Screen/FullApps/AlliedWallet/Assets/ic_tab3.ttf
+    - family: tab4
+      fonts:
+        - asset: lib/Screen/FullApps/AlliedWallet/Assets/ic_tab4.ttf
+    - family: tab5
+      fonts:
+        - asset: lib/Screen/FullApps/AlliedWallet/Assets/ic_tab5.ttf
+    - family: loser
+      fonts:
+        - asset: lib/Screen/FullApps/AlliedWallet/Assets/ic_loser.ttf
+    - family: Heart
+      fonts:
+        - asset: assets/font/HaveHeartOne.ttf
+          weight: 500
+    - family: Lemon
+      fonts:
+        - asset: assets/font/Lemon-Regular.ttf
+          weight: 400
+    - family: Berlin
+      fonts:
+        - asset: assets/font/berlin.TTF
+          weight: 600
+    - family: Popins
+      fonts:
+        - asset: assets/font/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/font/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/font/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/font/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/font/Poppins-Bold.ttf
+          weight: 700
+    - family: Amira
+      fonts:
+        - asset: assets/font/Amira.otf
+    - family: Gotik
+      fonts:
+        - asset: assets/font/GOTHIC.TTF
+          weight: 400
+        - asset: assets/font/GOTHICB.TTF
+          weight: 600
+    - family: Sofia
+      fonts:
+        - asset: assets/font/Sofia/SofiaProBold.otf
+          weight: 900
+        - asset: assets/font/Sofia/SofiaProSemiBold.otf
+          weight: 800
+        - asset: assets/font/Sofia/SofiaProMedium.otf
+          weight: 700
+        - asset: assets/font/Sofia/SofiaProRegular.otf
+          weight: 600
+        - asset: assets/font/Sofia/SofiaProLight.otf
+          weight: 500
+        - asset: assets/font/Sofia/SofiaProExtraLight.otf
+          weight: 400
+        - asset: assets/font/Sofia/SofiaProUltraLight.otf
+          weight: 300
+
+    # To addlib/Screen/UI_Screen/Plane_Apps/Assets to your application, add anlib/Screen/UI_Screen/Plane_Apps/Assets section, like this:
+  assets:
+    - assets/credentials.json
+    - assets/map_style.txt
+    - assets/images/marker.png
+    - assets/pdf/sample.pdf
+    - assets/illustration/error_illustration/error1.jpg
+    - assets/illustration/error_illustration/error2.jpg
+    - assets/illustration/error_illustration/error3.jpg
+    - assets/illustration/error_illustration/error3.jpg
+    - assets/illustration/error_illustration/error4.jpg
+    - assets/illustration/error_illustration/error5.jpg
+    - assets/illustration/error_illustration/error6.jpg
+    - assets/illustration/error_illustration/error7.jpg
+    - assets/illustration/error_illustration/error8.jpg
+    - assets/illustration/error_illustration/error9.jpg
+    - assets/illustration/error_illustration/error10.jpg
+    - assets/illustration/error_illustration/error11.jpg
+    - assets/illustration/error_illustration/error12.jpg
+    - assets/illustration/error_illustration/error13.jpg
+    - assets/illustration/error_illustration/error14.jpg
+    - assets/illustration/error_illustration/error15.jpg
+    - assets/illustration/error_illustration/error16.jpg
+    - assets/illustration/error_illustration/error17.jpg
+    - assets/illustration/error_illustration/error18.jpg
+    - assets/illustration/error_illustration/error19.jpg
+    - assets/illustration/error_illustration/error20.jpg
+    - assets/illustration/error_illustration/error21.jpg
+    - assets/illustration/error_illustration/error22.jpg
+    - assets/illustration/error_illustration/error23.jpg
+    - assets/illustration/error_illustration/error24.jpg
+    - assets/illustration/error_illustration/error25.jpg
+    - assets/illustration/error_illustration/error26.jpg
+    - assets/illustration/error_illustration/error27.jpg
+    - assets/illustration/error_illustration/error28.jpg
+    - assets/illustration/error_illustration/error29.jpg
+    - assets/illustration/error_illustration/error30.jpg
+    - assets/illustration/error_illustration/error31.jpg
+    - assets/illustration/error_illustration/error32.jpg
+    - assets/illustration/error_illustration/error33.jpg
+    - assets/illustration/error_illustration/error34.jpg
+    - assets/illustration/error_illustration/error35.jpg
+    - assets/illustration/error_illustration/error36.jpg
+    - assets/illustration/error_illustration/error37.jpg
+    - assets/illustration/error_illustration/error38.jpg
+    - assets/illustration/error_illustration/error39.jpg
+    - assets/illustration/error_illustration/error40.jpg
+    - assets/illustration/error_illustration/error40.jpg
+    - assets/illustration/SplashScreen_illustration/Splash1.jpg
+    - assets/illustration/SplashScreen_illustration/Splash2.jpg
+    - assets/illustration/SplashScreen_illustration/Splash3.jpg
+    - assets/illustration/SplashScreen_illustration/Splash4.jpg
+    - assets/illustration/SplashScreen_illustration/Splash5.jpg
+    - assets/illustration/SplashScreen_illustration/Splash6.jpg
+    - assets/illustration/SplashScreen_illustration/Splash7.jpg
+    - assets/images/boarding1.png
+    - assets/images/boarding2.png
+    - assets/images/boarding3.png
+    - assets/images/board1.png
+    - assets/images/board2.png
+    - assets/images/board3.png
+    - assets/images/onBoarding1.gif
+    - assets/images/onBoarding2.gif
+    - assets/images/onBoarding3.gif
+    - assets/images/onBoardingC1.png
+    - assets/images/onBoardingC2.png
+    - assets/images/onBoardingC3.png
+    - assets/images/SplashScreen.png
+    - assets/images/help.png
+    - assets/images/screenCard.png
+    - assets/images/materialIcon.png
+    - assets/images/card1.png
+    - assets/images/card2.png
+    - assets/images/card3.png
+    - assets/images/logo.png
+    - lib/Screen/FullApps/Safeway/Assets/splashScreen.png
+    - lib/Screen/FullApps/FreshChoice/assets/splashscreen.png
+    - lib/Screen/FullApps/Mozido/Assets/tabBar.png
+    - lib/Screen/FullApps/Mozido/Assets/splashscreen.png
+    - lib/Screen/FullApps/Coinbase/Assets/aboutapp.png
+    - lib/Screen/FullApps/Coinbase/Assets/chat.png
+    - lib/Screen/FullApps/Coinbase/Assets/creditAcount.png
+    - lib/Screen/FullApps/Coinbase/Assets/notification.png
+    - lib/Screen/FullApps/Coinbase/Assets/setting.png
+    - lib/Screen/FullApps/Coinbase/Assets/truck.png
+    - lib/Screen/FullApps/Coinbase/Assets/callcenter.png
+    - lib/Screen/FullApps/Coinbase/Assets/onBoarding1.png
+    - lib/Screen/FullApps/Coinbase/Assets/onBoarding2.png
+    - lib/Screen/FullApps/Coinbase/Assets/onBoarding3.png
+    - lib/Screen/FullApps/Coinbase/Assets/bils_finance.png
+    - lib/Screen/FullApps/Coinbase/Assets/creditCardVisa.png
+    - lib/Screen/FullApps/Coinbase/Assets/credit.png
+    - lib/Screen/FullApps/Coinbase/Assets/notifications.png
+    - lib/Screen/FullApps/Coinbase/Assets/noMessage.png
+    - lib/Screen/FullApps/Coinbase/Assets/contact_us.png
+    - lib/Screen/FullApps/Coinbase/Assets/buildingMenu.png
+    - lib/Screen/FullApps/Coinbase/Assets/cardMenu.png
+    - lib/Screen/FullApps/Coinbase/Assets/doctor_finance.png
+    - lib/Screen/FullApps/Coinbase/Assets/financeMenu.png
+    - lib/Screen/FullApps/Coinbase/Assets/findMenu.png
+    - lib/Screen/FullApps/Coinbase/Assets/giveMenu.png
+    - lib/Screen/FullApps/Coinbase/Assets/growthMenu.png
+    - lib/Screen/FullApps/Coinbase/Assets/hangout_finance.png
+    - lib/Screen/FullApps/Coinbase/Assets/historyEmpty.png
+    - lib/Screen/FullApps/Coinbase/Assets/lifeStyle_finance.png
+    - lib/Screen/FullApps/Coinbase/Assets/locationMenu.png
+    - lib/Screen/FullApps/Coinbase/Assets/menu_bus.png
+    - lib/Screen/FullApps/Coinbase/Assets/menu_home.png
+    - lib/Screen/FullApps/Coinbase/Assets/menu_shopping.png
+    - lib/Screen/FullApps/Coinbase/Assets/menu_tv.png
+    - lib/Screen/FullApps/Coinbase/Assets/moneyMenu.png
+    - lib/Screen/FullApps/Coinbase/Assets/people.png
+    - lib/Screen/FullApps/Coinbase/Assets/saveMenu.png
+    - lib/Screen/FullApps/Coinbase/Assets/scan.png
+    - lib/Screen/FullApps/Coinbase/Assets/shareMenu.png
+    - lib/Screen/FullApps/Coinbase/Assets/slackLogo.png
+    - lib/Screen/FullApps/Coinbase/Assets/solariaLogo.jpg
+    - lib/Screen/FullApps/Coinbase/Assets/SplashScreen.png
+    - lib/Screen/FullApps/Coinbase/Assets/transfer.png
+    - lib/Screen/FullApps/Coinbase/Assets/twitchLogo.png
+    - lib/Screen/FullApps/Coinbase/Assets/workout_finance.png
+    - lib/Screen/FullApps/Coinapult/assets/SplashScreen.png
+    - lib/Screen/FullApps/Coinapult/assets/alarm.png
+    - lib/Screen/FullApps/Coinapult/assets/creditCard.png
+    - lib/Screen/FullApps/Coinapult/assets/noTransaction.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/ae.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/SplashScreen.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/aion.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/bat.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/BCH.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/bee.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/bitcoin.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/bnt.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/btc.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/dnt.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/elf.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/EOS.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/ETC.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/eth.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/NEO.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/RIPLE.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/icon_bitcoin.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/icon_bee.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/icon_elf.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/icon_eth.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/icon_lnc.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/messageAppbar.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/create_wallet.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/T1_noMessage.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/icon_file.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/icon_image.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/icon_microphone.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/icon_monitor.png
+    - lib/Screen/FullApps/AlliedWallet/Assets/icon_video.png
+    - lib/Screen/FullApps/SunriseMart/Assets/choseLoginBackground.png
+    - lib/Screen/FullApps/SunriseMart/Assets/loginBackground.png
+    - lib/Screen/FullApps/SunriseMart/Assets/onBoarding1.png
+    - lib/Screen/FullApps/SunriseMart/Assets/onBoarding2.png
+    - lib/Screen/FullApps/SunriseMart/Assets/onBoarding3.png
+    - lib/Screen/FullApps/SunriseMart/Assets/splashBackground.png
+    - lib/Screen/FullApps/SunriseMart/Assets/logo.png
+    - lib/Screen/FullApps/SunriseMart/Assets/facebook.png
+    - lib/Screen/FullApps/SunriseMart/Assets/google.png
+    - lib/Screen/FullApps/SunriseMart/Assets/setting.png
+    - lib/Screen/FullApps/SunriseMart/Assets/girlcallcenter.png
+    - lib/Screen/FullApps/SunriseMart/Assets/icon/iconAmerican.png
+    - lib/Screen/FullApps/SunriseMart/Assets/icon/iconBreakfast.png
+    - lib/Screen/FullApps/SunriseMart/Assets/icon/iconBurgers.png
+    - lib/Screen/FullApps/SunriseMart/Assets/icon/iconPizza.png
+    - lib/Screen/FullApps/SunriseMart/Assets/icon/bookmark.png
+    - lib/Screen/FullApps/SunriseMart/Assets/icon/photos.png
+    - lib/Screen/FullApps/SunriseMart/Assets/icon/ratting.png
+    - lib/Screen/FullApps/SunriseMart/Assets/icon/searchEmpty.png
+    - lib/Screen/FullApps/SunriseMart/Assets/icon/logout.png
+    - lib/Screen/FullApps/SunriseMart/Assets/icon/aboutApps.png
+    - lib/Screen/FullApps/SunriseMart/Assets/icon/callCenter.png
+    - lib/Screen/FullApps/SunriseMart/Assets/icon/editProfile.png
+    - lib/Screen/FullApps/SunriseMart/Assets/ilustrasion/emptyCart.png
+    - lib/Screen/FullApps/SunriseMart/Assets/ilustrasion/cartIlustration.png
+    - lib/Screen/FullApps/SunriseMart/Assets/ilustrasion/order.png
+    - lib/Screen/FullApps/SunriseMart/Assets/ilustrasion/talking.png
+    - lib/Screen/FullApps/SunriseMart/Assets/profile.png
+    - lib/Screen/FullApps/SunriseMart/Assets/backgroundProfile.png
+    - lib/Screen/FullApps/SunriseMart/Assets/creditCard.png
+    - lib/Screen/FullApps/SunriseMart/Assets/cod.png
+    - lib/Screen/FullApps/SunriseMart/Assets/paypal.png
+    - lib/Screen/FullApps/SunriseMart/Assets/visa.png
+    - lib/Screen/FullApps/SunriseMart/Assets/money.png
+    - lib/Screen/FullApps/SunriseMart/Assets/house.png
+    - lib/Screen/FullApps/SunriseMart/Assets/personal.png
+    - lib/Screen/FullApps/SunriseMart/Assets/checklist.png
+    - lib/Screen/FullApps/SunriseMart/Assets/category/category1.jpg
+    - lib/Screen/FullApps/SunriseMart/Assets/category/category2.jpg
+    - lib/Screen/FullApps/SunriseMart/Assets/category/category3.jpg
+    - lib/Screen/FullApps/SunriseMart/Assets/category/category4.jpg
+    - lib/Screen/FullApps/SunriseMart/Assets/category/category5.jpg
+    - lib/Screen/FullApps/SunriseMart/Assets/category/category6.jpg
+    - lib/Screen/FullApps/SunriseMart/Assets/category/category7.jpg
+    - lib/Screen/FullApps/SunriseMart/Assets/category/category8.jpg
+    - lib/Screen/FullApps/SunriseMart/Assets/category/category9.jpg
+    - lib/Screen/FullApps/SunriseMart/Assets/category/category10.jpg
+    - lib/Screen/FullApps/FreshChoice/splashscreen.png
+    - lib/Screen/FullApps/VinckierFoods/Assets/image/breakfast.png
+    - lib/Screen/FullApps/VinckierFoods/Assets/image/splashscreen.png
+    - lib/Screen/FullApps/VinckierFoods/Assets/image/cafe.png
+    - lib/Screen/FullApps/VinckierFoods/Assets/image/dinner.png
+    - lib/Screen/FullApps/VinckierFoods/Assets/image/healtyfood.png
+    - lib/Screen/FullApps/VinckierFoods/Assets/image/lunch.png
+    - lib/Screen/FullApps/VinckierFoods/Assets/image/icon_image.png
+    - lib/Screen/FullApps/VinckierFoods/Assets/image/icon_file.png
+    - lib/Screen/FullApps/VinckierFoods/Assets/image/icon_microphone.png
+    - lib/Screen/FullApps/VinckierFoods/Assets/image/icon_monitor.png
+    - lib/Screen/FullApps/VinckierFoods/Assets/image/icon_video.png
+    - lib/Screen/FullApps/VinckierFoods/Assets/image/noMessage.png
+    - lib/Screen/FullApps/Safeway/splashScreen.png
+    - lib/Screen/FullApps/Snapcash/Assets/splashScreen.png
+    - lib/Screen/FullApps/RecipesMeat/Assets/splash.png
+    - lib/Screen/FullApps/RecipesMeat/Assets/appBar.png
+    - lib/Screen/FullApps/RecipesMeat/Assets/background.png
+    - lib/Screen/FullApps/RecipesMeat/Assets/left.png
+    - lib/Screen/FullApps/RecipesMeat/Assets/menu1.png
+    - lib/Screen/FullApps/RecipesMeat/Assets/menu2.jpg
+    - lib/Screen/FullApps/RecipesMeat/Assets/menu3.jpg
+    - lib/Screen/FullApps/RecipesMeat/Assets/right.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/card/card1.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/card/card2.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/card/card3.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/card/card4.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/card/card5.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/card/card6.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/card/card7.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/card/card8.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/card/card9.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/card/card10.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/card/card11.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/cardGreen.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/detail/change.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/detail/facebook.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/detail/login.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/detail/notification.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/detail/policy.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/detail/privacy.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/detail/ratting.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/detail/wallet.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/biometric.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/home.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/language.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/logout.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/messages.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/nekwork.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/payment.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/profile.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/setting.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/verification.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/verified.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/drawer/wallet.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/profile/box1.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/profile/box2.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/BoxList.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/Circle.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/connectionHome.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/buttonConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/containerConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/menuHome.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/notifHome.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/plusHome.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/barcode.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/Wallet.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/cardBlue.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/timePicker.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/boxWhite.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/boxHome.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/graph.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/graph2.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/boxBottomNav.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/power.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/onBoarding3.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/backContainer.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/boxWhite.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/otpContainer.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/boxReset.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/connectionHome.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/schoolConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/communityConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/jonConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/labsConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/dentalConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/hospitalConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/insuranceConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/labsConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/passportConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/schoolConnection2.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/sporthConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/courtConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/jonConnection2.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/searchConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/boxConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/hospitalConnection2.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/universityConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/carConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/rentalConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/bankConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/internetConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/waterConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/grafik.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/airPortConnection.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/Box/boxEducation1.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/Box/boxEducation2.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/Box/boxEducation3.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/Box/boxEducation4.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/key.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/lock.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/Image/faceId.png
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/create.json
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/dashboard.json
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/faceId.json
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/newPassword.json
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/confirmation.json
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/analyzingWebsite.json
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/emailSent.json
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/faceIdScan.json
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/seo.json
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/idScan.json
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/registration.json
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/rocket.json
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/signin.json
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/third.json
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/welcome.json
+    - lib/Screen/UI_Screen/Plane_Apps/Assets/button.json
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/img/background_bar.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/img/background_side_menu.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/img/background.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/img/carousel_image_1.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/img/carousel_image_2.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/img/carousel_image_3.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/img/logoAppbar.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/clip.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/login_logo.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/login_pass.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/login_quote.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/login_user.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_comunicados.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_enviar.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_mi_estado.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_reportes.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_side_menu_articulos.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_side_menu_ayuda.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_side_menu_blog.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_side_menu_compra.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_side_menu_documentos.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_side_menu_mi_perfil.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_side_menu_salir.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_solicitudes_adm.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_solicitudes_mejoras.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_solicitudes_adm.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_solicitudes_mudanzas.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_solicitudes_new_adm.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_solicitudes_new_mejoras.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_solicitudes_new_mudanzas.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_solicitudes_new_reclamos.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_solicitudes_new_reserva.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_solicitudes_new_sugerencias.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_solicitudes_new_reclamos.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_solicitudes_new_reserva.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_solicitudes_new_sugerencias.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/opt_solicitudes.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/receipt_logo.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/sail_pagado.png
+    - lib/Screen/UI_Screen/Expensa_Apps/assets/icon/splash_logo.png
+    - lib/Screen/FullApps/NiuEducation/assets/image/EducationalCareer.png
+    - lib/Screen/FullApps/NiuEducation/assets/image/EvalutionOfDiploma.png
+    - lib/Screen/FullApps/NiuEducation/assets/image/GreenCard.png
+    - lib/Screen/FullApps/NiuEducation/assets/image/InterviewTips.png
+    - lib/Screen/FullApps/NiuEducation/assets/image/JobsInterview.png
+    - lib/Screen/FullApps/NiuEducation/assets/image/LearnEnglish.png
+    - lib/Screen/FullApps/NiuEducation/assets/image/Nursing.png
+    - lib/Screen/FullApps/NiuEducation/assets/image/Resume.png
+    - lib/Screen/FullApps/NiuEducation/assets/image/Scholarship.png
+    - lib/Screen/FullApps/NiuEducation/assets/image/SpeakWithConfidence.png
+    - lib/Screen/FullApps/NiuEducation/assets/image/SplashScreen.png
+    - lib/Screen/FullApps/NiuEducation/assets/image/TrickVideo.png
+    - lib/Screen/FullApps/NiuEducation/assets/image/nurse1.jpg
+    - lib/Screen/FullApps/NiuEducation/assets/image/nurse3.jpg
+    - lib/Screen/FullApps/NiuEducation/assets/image/nurse4.jpg
+    - lib/Screen/FullApps/NiuEducation/assets/image/education2.jpg
+    - lib/Screen/FullApps/NiuEducation/assets/image/instutionalGrant.jpg
+    - lib/Screen/FullApps/NiuEducation/assets/image/federalGrant.jpg
+    - lib/Screen/FullApps/NiuEducation/assets/image/onlineScholarships.jpg
+    - lib/Screen/FullApps/NiuEducation/assets/image/stateGrant.jpg
+    - lib/Screen/FullApps/NiuEducation/assets/image/chat.jpg
+    - lib/Screen/FullApps/NiuEducation/assets/image/internshipsvisa.jpg
+    - lib/Screen/FullApps/NiuEducation/assets/image/internshipsGcard.jpg
+    - lib/Screen/FullApps/NiuEducation/assets/image/MyVisaJobs.jpg
+    - lib/Screen/FullApps/NiuEducation/assets/image/indeedCard.jpg
+    - lib/Screen/FullApps/NiuEducation/assets/image/MonsterGcardJobs.jpg
+    - lib/Screen/FullApps/NiuEducation/assets/image/onboarding1.png
+    - lib/Screen/FullApps/NiuEducation/assets/image/onboarding2.png
+    - lib/Screen/FullApps/NiuEducation/assets/image/onboarding3.png
+    - lib/Screen/FullApps/NiuEducation/assets/image/backdiploma.jpeg
+    - lib/Screen/FullApps/NiuEducation/assets/image/work.jpeg
+    - lib/Screen/FullApps/NiuEducation/assets/image/noNotification.png
+    - lib/Screen/FullApps/Coinluv/image/onboarding1.png
+    - lib/Screen/FullApps/Coinluv/image/onboarding2.png
+    - lib/Screen/FullApps/Coinluv/image/onboarding3.png
+    - lib/Screen/FullApps/Coinluv/image/round.png
+    - lib/Screen/FullApps/Coinluv/image/qrCode.png
+    - lib/Screen/FullApps/Coinluv/image/splashScreen.png
+    - lib/Screen/FullApps/Marketplace/assets/img/loginImage1.png
+    - lib/Screen/FullApps/Marketplace/assets/img/loginImage2.png
+    - lib/Screen/FullApps/Marketplace/assets/img/loginImage3.png
+    - lib/Screen/FullApps/Marketplace/assets/img/mapExample.png
+    - lib/Screen/FullApps/Marketplace/assets/img/splashScreen.png
+    - lib/Screen/FullApps/Marketplace/assets/avatars/avatar-1.jpg
+    - lib/Screen/FullApps/Marketplace/assets/avatars/avatar-2.jpg
+    - lib/Screen/FullApps/Marketplace/assets/avatars/avatar-3.jpg
+    - lib/Screen/FullApps/Marketplace/assets/avatars/avatar-4.jpg
+    - lib/Screen/FullApps/Marketplace/assets/avatars/avatar-5.jpg
+    - lib/Screen/FullApps/Marketplace/assets/avatars/avatar-6.jpg
+    - lib/Screen/FullApps/Marketplace/assets/img/flashsaleicon.png
+    - lib/Screen/FullApps/Marketplace/assets/icon/account.png
+    - lib/Screen/FullApps/Marketplace/assets/icon/logout.png
+    - lib/Screen/FullApps/Marketplace/assets/icon/myListing.png
+    - lib/Screen/FullApps/Marketplace/assets/icon/myOrders.png
+    - lib/Screen/FullApps/Marketplace/assets/icon/notification.png
+    - lib/Screen/FullApps/Marketplace/assets/icon/privacy.png
+    - lib/Screen/FullApps/Marketplace/assets/icon/saved.png
+    - lib/Screen/FullApps/Marketplace/assets/icon/setting.png
+    - lib/Screen/FullApps/Marketplace/assets/icon/terms.png
+    - lib/Screen/FullApps/Marketplace/assets/img/mapsDummy.png
+    - lib/Screen/FullApps/Marketplace/assets/img/mapsDummy.png
+    - lib/Screen/UI_Screen/LanguageLearning_Apps/assets/images/course-1.png
+    - lib/Screen/UI_Screen/LanguageLearning_Apps/assets/images/course-2.png
+    - lib/Screen/UI_Screen/LanguageLearning_Apps/assets/images/course-3.png
+    - lib/Screen/UI_Screen/LanguageLearning_Apps/assets/images/course-4.png
+    - lib/Screen/UI_Screen/LanguageLearning_Apps/assets/images/course-5.png
+    - lib/Screen/UI_Screen/LanguageLearning_Apps/assets/images/arab.png
+    - lib/Screen/UI_Screen/LanguageLearning_Apps/assets/images/china.png
+    - lib/Screen/UI_Screen/LanguageLearning_Apps/assets/images/arab.png
+    - lib/Screen/UI_Screen/LanguageLearning_Apps/assets/images/india.png
+    - lib/Screen/UI_Screen/LanguageLearning_Apps/assets/images/indonesia.png
+    - lib/Screen/UI_Screen/LanguageLearning_Apps/assets/images/us.png
+    - lib/Screen/UI_Screen/LanguageLearning_Apps/assets/images/home.png
+    - lib/Screen/UI_Screen/LanguageLearning_Apps/assets/images/lesson.png
+    - lib/Screen/UI_Screen/LanguageLearning_Apps/assets/images/person-1.png
+    - lib/Screen/UI_Screen/LanguageLearning_Apps/assets/images/person-2.png
+    - lib/Screen/UI_Screen/LanguageLearning_Apps/assets/images/person-3.png
+    - lib/Screen/UI_Screen/LanguageLearning_Apps/assets/images/profile.png
+    - lib/Screen/UI_Screen/LanguageLearning_Apps/assets/svg/google.svg
+    - lib/Screen/UI_Screen/Hotel_Apps/assets/images/dp.png
+    - lib/Screen/UI_Screen/Hotel_Apps/assets/images/facebook.png
+    - lib/Screen/UI_Screen/Hotel_Apps/assets/images/google.png
+    - lib/Screen/UI_Screen/Hotel_Apps/assets/images/logo.png
+    - lib/Screen/UI_Screen/Hotel_Apps/assets/images/page1.png
+    - lib/Screen/UI_Screen/Hotel_Apps/assets/images/page2.png
+    - lib/Screen/UI_Screen/Hotel_Apps/assets/images/page3.png
+    - lib/Screen/UI_Screen/Hotel_Apps/assets/images/single-bg.png
+    - lib/Screen/UI_Screen/Laundry_Apps/assets/images/cloth_faded.png
+    - lib/Screen/UI_Screen/Laundry_Apps/assets/images/icon1.png
+    - lib/Screen/UI_Screen/Laundry_Apps/assets/images/icon2.png
+    - lib/Screen/UI_Screen/Laundry_Apps/assets/images/icon3.png
+    - lib/Screen/UI_Screen/Laundry_Apps/assets/images/icon4.png
+    - lib/Screen/UI_Screen/Laundry_Apps/assets/images/icon5.png
+    - lib/Screen/UI_Screen/Laundry_Apps/assets/images/icon6.png
+    - lib/Screen/UI_Screen/Laundry_Apps/assets/images/dp.png
+    - lib/Screen/UI_Screen/Laundry_Apps/assets/images/house1.png
+    - lib/Screen/UI_Screen/Laundry_Apps/assets/images/house2.png
+    - lib/Screen/UI_Screen/Laundry_Apps/assets/images/washlogo.png
+    - lib/Screen/UI_Screen/Laundry_Apps/assets/images/illustration.png
+    - lib/Screen/UI_Screen/Laundry_Apps/assets/images/washing_machine_illustration.png
+    - lib/Screen/UI_Screen/News_Apps/assets/images/sporth.png
+    - lib/Screen/UI_Screen/News_Apps/assets/images/tech.png
+    - lib/Screen/UI_Screen/News_Apps/assets/images/politic.png
+    - lib/Screen/UI_Screen/News_Apps/assets/images/art.png
+    - lib/Screen/UI_Screen/News_Apps/assets/images/chris.png
+    - lib/Screen/UI_Screen/News_Apps/assets/images/messi.png
+    - lib/Screen/UI_Screen/News_Apps/assets/images/notification.png
+    - lib/Screen/UI_Screen/News_Apps/assets/images/paris.png
+    - lib/Screen/UI_Screen/News_Apps/assets/images/trump.png
+    - lib/Screen/UI_Screen/News_Apps/assets/svg/arts.svg
+    - lib/Screen/UI_Screen/News_Apps/assets/svg/food.svg
+    - lib/Screen/UI_Screen/News_Apps/assets/svg/notification.svg
+    - lib/Screen/UI_Screen/News_Apps/assets/svg/politics.svg
+    - lib/Screen/UI_Screen/News_Apps/assets/svg/technology.svg
+    - lib/Screen/UI_Screen/Login_Screen/Assets/login1.png
+    - lib/Screen/UI_Screen/Login_Screen/Assets/login4a.png
+    - lib/Screen/UI_Screen/Login_Screen/Assets/login4b.png
+    - lib/Screen/UI_Screen/Login_Screen/Assets/login7.png
+    - lib/Screen/UI_Screen/Login_Screen/Assets/login10.png
+    - lib/Screen/UI_Screen/Login_Screen/Assets/login12.png
+    - lib/Screen/UI_Screen/Login_Screen/Assets/login19.png
+    - lib/Screen/UI_Screen/Login_Screen/Assets/login27/background_circles.svg
+    - lib/Screen/UI_Screen/Login_Screen/Assets/login27/dots_rectangle.svg
+    - lib/Screen/UI_Screen/Login_Screen/Assets/login27/sample_logo.svg
+    - lib/Screen/UI_Screen/Login_Screen/Assets/login27/striped_oval.svg
+    - lib/Screen/Integration/Language_Integration/language/ar-DZ.json
+    - lib/Screen/Integration/Language_Integration/language/en-US.json
+    - lib/Screen/Integration/Language_Integration/language/zh-CN.json
+    - lib/Screen/Integration/Language_Integration/language/pt-BR.json
+    - lib/Screen/Integration/Language_Integration/language/hi-IN.json
+    - lib/Screen/Integration/Language_Integration/language/id-ID.json
+    - assets/images/SplashScreen.png
+    - assets/images/materialCard.png
+    - assets/images/materialIcon.png
+    - assets/images/screenCard.png
+    - assets/images/noInternet.png
+    - assets/images/screenIcon.png
+    - assets/images/help.png
+    - assets/images/bottomNavigate.png
+    - assets/images/bottomSheet.png
+    - assets/images/button.png
+    - assets/images/card.png
+    - assets/images/chips.png
+    - assets/images/dialog.png
+    - assets/images/expand.png
+    - assets/images/grid.png
+    - assets/images/list.png
+    - assets/images/menu.png
+    - assets/images/pickers.png
+    - assets/images/progress.png
+    - assets/images/onBoarding1.gif
+    - assets/images/onBoarding2.gif
+    - assets/images/onBoarding3.gif
+    - assets/images/slider.png
+    - assets/images/tabs.png
+    - assets/images/toast.png
+    - assets/images/toolbar.png
+    - assets/images/imageHeader.jpg
+    - assets/images/category3.jpg
+    - assets/images/category5.jpg
+    - assets/images/category6.jpg
+    - assets/images/category7.jpg
+    - assets/images/background10.png
+    - assets/images/backgroundLine.png
+    - assets/images/plate_food/1.png
+    - assets/images/plate_food/2.png
+    - assets/images/plate_food/3.png
+    - assets/images/plate_food/4.png
+    - assets/images/plate_food/5.png
+    - assets/images/plate_food/6.png
+    - assets/images/plate_food/7.png
+    - assets/images/plate_food/8.png
+    - assets/images/plate_food/9.png
+    - assets/images/plate_food/10.png
+    - assets/images/plate_food/11.png
+    - assets/images/plate_food/12.png
+    - assets/images/plate_food/13.png
+    - assets/images/plate_food/14.png
+    - assets/images/plate_food/15.png
+    - assets/images/plate_food/16.png
+    - assets/images/plate_food/17.png
+    - assets/images/plate_food/18.png
+    - assets/images/plate_food/19.png
+    - assets/images/plate_food/20.png
+    - assets/icon/amerika.png
+    - assets/icon/thailand.png
+    - assets/icon/england.png
+    - assets/icon/italia.png
+    - assets/icon/spanyol.png
+    - assets/icon/paris.png
+    - assets/images/deals_layout/buildingMenu.png
+    - assets/images/deals_layout/cardMenu.png
+    - assets/images/deals_layout/financeMenu.png
+    - assets/images/deals_layout/findMenu.png
+    - assets/images/deals_layout/giveMenu.png
+    - assets/images/deals_layout/growthMenu.png
+    - assets/images/deals_layout/locationMenu.png
+    - assets/images/deals_layout/moneyMenu.png
+    - assets/images/deals_layout/saveMenu.png
+    - assets/images/deals_layout/shareMenu.png
+    - assets/images/twitchLogo.png
+    - assets/images/solariaLogo.jpg
+    - assets/images/slackLogo.png
+    - assets/images/finance_layout/bils_finance.png
+    - assets/images/finance_layout/doctor_finance.png
+    - assets/images/finance_layout/hangout_finance.png
+    - assets/images/finance_layout/lifeStyle_finance.png
+    - assets/images/finance_layout/workout_finance.png
+    - assets/images/icon.png
